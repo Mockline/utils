@@ -1,0 +1,59 @@
+{
+  "name": "default-repository",
+  "version": "0.0.3",
+  "private": true,
+  "description": "default repository for HugoRCD",
+  "author": "HugoRCD",
+  "funding": "https://github.com/sponsors/HugoRCD",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HugoRCD/default-repository.git"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "automd": "automd",
+    "prepack": "nuxt-module-build build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+    "release": "npm run lint && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@egoist/tailwindcss-icons": "^1.7.2",
+    "@iconify-json/heroicons": "^1.1.19",
+    "@iconify-json/lucide": "^1.1.154",
+    "@nuxt/fonts": "^0.0.1",
+    "nuxt-icon": "^0.6.8",
+    "vue-sonner": "^1.0.3"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxt/eslint-config": "^0.2.0",
+    "@nuxt/kit": "^3.8.2",
+    "@nuxt/module-builder": "^0.5.4",
+    "@nuxt/schema": "^3.8.2",
+    "@nuxt/test-utils": "^3.8.1",
+    "@hrcd/eslint-config": "^0.0.2",
+    "automd": "^0.3.7",
+    "changelogen": "^0.5.5",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.3",
+    "vitest": "^1.4.0"
+  }
+}
