@@ -43,6 +43,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Modules
     await installModule('@nuxtjs/color-mode', { classSuffix: '', storageKey: 'mockline-color-mode' })
+    await installModule('@nuxt/fonts')
 
     // Add vue-sonner
     addImportsSources({
