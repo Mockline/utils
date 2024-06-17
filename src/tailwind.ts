@@ -50,7 +50,6 @@ function generateTailwindConfigContent(runtimeDir: string, options: ModuleOption
 
     module.exports = {
       darkMode: 'class',
-      safelist: generateColorSafelist(),
       content: {
         files: [
           ${JSON.stringify(resolve(runtimeDir, 'components/**/*.{vue,mjs,ts}'))},

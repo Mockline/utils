@@ -25,7 +25,7 @@ export default defineNuxtModule<ModuleOptions>({
   meta: {
     name,
     version,
-    configKey: 'mockline-utils',
+    configKey: 'mocklineUtils',
   },
   defaults: {
     prefix: 'M',
