@@ -4,8 +4,10 @@ on:
   pull_request_target:
     types:
       - opened
+      - edited
     branches:
       - main
+      - dev
 
 jobs:
   add-pr-labels:
@@ -36,7 +38,7 @@ jobs:
               ci: 'ci',
               docs: 'documentation',
               enhancement: 'enhancement',
-              chore: 'chore',
+              chore: 'dependencies',
               perf: 'performance',
               style: 'style',
               test: 'test',

@@ -1,8 +1,10 @@
-name: autofix.ci # needed to securely identify the workflow
+name: autofix.ci
 
 on:
   pull_request:
-    branches: [main]
+    branches:
+      - main
+      - dev
 
 permissions:
   contents: read
@@ -13,8 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: latest
 
       - name: 📦 Install dependencies
         run: bun install
@@ -23,7 +23,7 @@ jobs:
         run: bun run lint:fix
 
       - name: 📚 Build docs
-        run: bun run automd
+        run: bunx automd
 
       - uses: autofix-ci/action@ea32e3a12414e6d3183163c3424a7d7a8631ad84
         with:

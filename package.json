@@ -1,13 +1,17 @@
 {
-  "name": "default-repository",
-  "version": "0.0.3",
-  "private": true,
-  "description": "default repository for HugoRCD",
-  "author": "HugoRCD",
-  "funding": "https://github.com/sponsors/HugoRCD",
+  "name": "@mockline/utils",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HugoRCD/default-repository.git"
+    "url": "https://github.com/mockline/utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mockline/utils/issues"
   },
   "exports": {
     ".": {
@@ -35,25 +39,41 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@egoist/tailwindcss-icons": "^1.7.2",
-    "@iconify-json/heroicons": "^1.1.19",
-    "@iconify-json/lucide": "^1.1.154",
-    "@nuxt/fonts": "^0.0.1",
-    "nuxt-icon": "^0.6.8",
-    "vue-sonner": "^1.0.3"
+    "@egoist/tailwindcss-icons": "^1.8.0",
+    "@iconify-json/heroicons": "^1.1.21",
+    "@iconify-json/lucide": "^1.1.189",
+    "@nuxt/fonts": "^0.7.0",
+    "@nuxt/kit": "^3.11.2",
+    "@nuxtjs/color-mode": "^3.4.1",
+    "@nuxtjs/tailwindcss": "^6.12.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.13",
+    "defu": "^6.1.4",
+    "pathe": "^1.1.2",
+    "tailwindcss": "^3.4.3",
+    "vue-sonner": "^1.1.2"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@nuxt/eslint-config": "^0.2.0",
-    "@nuxt/kit": "^3.8.2",
+    "@hrcd/eslint-config": "^1.1.5",
     "@nuxt/module-builder": "^0.5.4",
     "@nuxt/schema": "^3.8.2",
     "@nuxt/test-utils": "^3.8.1",
-    "@hrcd/eslint-config": "^0.0.2",
     "automd": "^0.3.7",
     "changelogen": "^0.5.5",
-    "eslint": "^8.57.0",
-    "typescript": "^5.4.3",
-    "vitest": "^1.4.0"
-  }
+    "eslint": "^9.5.0",
+    "typescript": "^5.4.3"
+  },
+  "description": "Mockline Utils is the minimal utility library for Mockline. To kickstart your project with some useful modules like color mode, tailwindcss, and more.",
+  "keywords": [
+    "nuxt",
+    "nuxt3",
+    "nuxt-module",
+    "mockline",
+    "vue",
+    "vue3",
+    "tailwindcss",
+    "tailwind"
+  ]
 }

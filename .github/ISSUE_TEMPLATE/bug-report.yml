@@ -1,11 +1,11 @@
-name: 🐛 Bug report
+name: "🐛 Bug report"
 description: Report a bug to help us improve the project.
-labels: [bug]
+labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Before reporting a bug, please make sure that you have read through our documentation and existing [issues](https://github.com/HugoRCD/default-repository/issues) to see if the bug has already been reported or fixed. If it has, please add your reaction to the existing issue instead of creating a new one.
+        Before reporting a bug, please make sure that you have read through our [documentation](https://shelve.hrcd.fr) and existing [issues](https://github.com/HugoRCD/shelve/issues) to see if the bug has already been reported or fixed. If it has, please add your reaction to the existing issue instead of creating a new one.
   - type: textarea
     id: env
     attributes:
@@ -30,7 +30,7 @@ body:
     attributes:
       label: Reproduction
       description: A reproduction is strongly encouraged, to help us identify the issue and fix it. You can use a code sandbox or a repository to reproduce the issue.
-      placeholder: https://stackblitz.com/edit/default-repository
+      placeholder: https://stackblitz.com/edit/blanked
     validations:
       required: true
   - type: textarea
@@ -41,7 +41,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: additional
+    id: additonal
     attributes:
       label: Additional context
       description: If applicable, add any other context or screenshots here.

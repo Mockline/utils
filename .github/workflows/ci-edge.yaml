@@ -1,0 +1,50 @@
+name: ci-edge
+
+on:
+  push:
+    branches:
+      - dev
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+        with:
+          fetch-depth: 0
+
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: 📦 Install dependencies
+        run: bun install
+
+      - name: 🚀 Prepare Edge
+        run: bun run dev:prepare
+
+      - name: 💅 Lint code
+        run: bun run lint
+
+      - uses: dorny/paths-filter@v3
+        id: changes
+        with:
+          filters: |
+            src:
+              - 'packages/mockline/src/**'
+              - 'packages/mockline/package.json'
+              - 'packages/mockline/bun.lockb'
+              - 'package.json'
+              - 'bun.lockb'
+
+      - name: 🚀 Release Edge
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && steps.changes.outputs.src == 'true')
+        run: ./scripts/release-edge.sh
+        env:
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
