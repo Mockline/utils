@@ -44,7 +44,6 @@ function generateTailwindConfigContent(runtimeDir: string, options: ModuleOption
   : string {
   // Import required modules for TailwindCSS configuration
   return `
-    const { generateColorSafelist } = require(${JSON.stringify(resolve(runtimeDir, 'utils', 'colors'))});
     import plugin, { type Config } from 'tailwindcss';
     import { iconsPlugin, getIconCollections } from '@egoist/tailwindcss-icons';
 
