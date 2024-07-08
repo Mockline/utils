@@ -1,7 +1,9 @@
 <template>
   <div class="size-full">
-    <h1 class="text-center text-2xl">
+    <h1 class="flex items-center justify-center gap-2 text-center text-2xl">
       <span class="font-newsreader italic">Mockline</span> Utils Playground
+      <Icon name="lucide:plus-circle" class="text-primary size-6" />
+      <Icon name="custom:mockline" class="size-8 fill-red-600" />
     </h1>
     <button @click="() => toast.info('Hello There!')">
       Render a toast

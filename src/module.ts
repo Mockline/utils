@@ -5,7 +5,6 @@ import {
   installModule,
   addImportsSources,
 } from '@nuxt/kit'
-import type { CollectionNames, IconsPluginOptions } from '@egoist/tailwindcss-icons'
 import { name, version } from '../package.json'
 import { installTailwind } from './tailwind'
 
@@ -14,11 +13,6 @@ export type ModuleOptions = {
    * Prefix for all components
    */
   prefix?: string,
-  /**
-   * The icon collections to use
-   * @default ['heroicons', 'lucide']
-   */
-  icons: CollectionNames[] | 'all' | IconsPluginOptions,
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -29,7 +23,6 @@ export default defineNuxtModule<ModuleOptions>({
   },
   defaults: {
     prefix: 'M',
-    icons: ['heroicons', 'lucide'],
   },
   async setup(options: ModuleOptions, nuxt): Promise<void> {
     const {resolve} = createResolver(import.meta.url)
@@ -44,6 +37,9 @@ export default defineNuxtModule<ModuleOptions>({
     // Modules
     await installModule('@nuxtjs/color-mode', { classSuffix: '', storageKey: 'mockline-color-mode' })
     await installModule('@nuxt/fonts')
+    await installModule('@nuxt/icon', {
+      mode: 'svg',
+    })
 
     // Add vue-sonner
     addImportsSources({
