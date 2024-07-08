@@ -31,7 +31,7 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "release": "npm run lint && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "release": "automd && npm run lint && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "typecheck": "tsc --noEmit"
@@ -63,7 +63,7 @@
     "eslint": "^9.5.0",
     "typescript": "^5.4.3"
   },
-  "description": "Mockline Utils is the minimal utility library for Mockline. To kickstart your project with some useful modules like color mode, tailwindcss, and more.",
+  "description": "Mockline Utils is the minimal utility library for Mockline. To kickstart your project with some useful modules like color mode, tailwindcss, nuxt icons, and more.",
   "keywords": [
     "nuxt",
     "nuxt3",
