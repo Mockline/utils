@@ -1,5 +1,5 @@
-import { addTemplate, createResolver, installModule, useNuxt } from '@nuxt/kit'
-import type { ModuleOptions } from '@nuxt/schema'
+import { addTemplate, createResolver, installModule } from '@nuxt/kit'
+import type { ModuleOptions, Nuxt } from '@nuxt/schema'
 import { defu } from 'defu'
 import { join } from 'pathe'
 
@@ -10,7 +10,7 @@ import { join } from 'pathe'
  * @param nuxt - The Nuxt instance.
  * @param resolve - Resolver function.
  */
-export async function installTailwind(options: ModuleOptions, nuxt = useNuxt(), resolve = createResolver(import.meta.url).resolve): Promise<void> {
+export async function installTailwind(options: ModuleOptions, nuxt: Nuxt, resolve = createResolver(import.meta.url).resolve): Promise<void> {
   const runtimeDir = resolve('./runtime')
 
   // Define the TailwindCSS configuration template
