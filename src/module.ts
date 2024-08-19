@@ -25,7 +25,7 @@ export default defineNuxtModule<ModuleOptions>({
     prefix: 'M',
   },
   async setup(options, nuxt): Promise<void> {
-    const {resolve} = createResolver(import.meta.url)
+    const { resolve } = createResolver(import.meta.url)
 
     // Transpile runtime
     const runtimeDir = resolve('./runtime')
