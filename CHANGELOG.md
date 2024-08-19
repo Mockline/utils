@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.0.4
+
+[compare changes](https://github.com/mockline/utils/compare/v1.0.3...v1.0.4)
+
+### 🏡 Chore
+
+- **release:** V1.0.3 ([0f2fcd9](https://github.com/mockline/utils/commit/0f2fcd9))
+- Apply automated lint fixes ([d3e1769](https://github.com/mockline/utils/commit/d3e1769))
+- Apply automated lint fixes ([fac860a](https://github.com/mockline/utils/commit/fac860a))
+- Apply automated lint fixes ([64c5614](https://github.com/mockline/utils/commit/64c5614))
+- Apply automated lint fixes ([bc612fb](https://github.com/mockline/utils/commit/bc612fb))
+
+### ❤️ Contributors
+
+- HugoRCD ([@HugoRCD](http://github.com/HugoRCD))
+
 ## v1.0.3
 
 [compare changes](https://github.com/mockline/utils/compare/v1.0.2...v1.0.3)
