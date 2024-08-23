@@ -5,6 +5,7 @@ import {
   installModule,
   addImportsSources,
 } from '@nuxt/kit'
+import type { Nuxt } from '@nuxt/schema'
 import { name, version } from '../package.json'
 import { installTailwind } from './tailwind'
 
@@ -24,7 +25,7 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     prefix: 'M',
   },
-  async setup(options, nuxt): Promise<void> {
+  async setup(options: ModuleOptions, nuxt: Nuxt): Promise<void> {
     const { resolve } = createResolver(import.meta.url)
 
     // Transpile runtime
