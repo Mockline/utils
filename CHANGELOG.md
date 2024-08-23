@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.5
+
+[compare changes](https://github.com/mockline/utils/compare/v1.0.4...v1.0.5)
+
+### 🏡 Chore
+
+- **release:** V1.0.4 ([213ee0e](https://github.com/mockline/utils/commit/213ee0e))
+
+### ❤️ Contributors
+
+- HugoRCD ([@HugoRCD](http://github.com/HugoRCD))
+
 ## v1.0.4
 
 [compare changes](https://github.com/mockline/utils/compare/v1.0.3...v1.0.4)
